@@ -34,6 +34,7 @@ elementoPai {
     justify-content: space-around;
 }
 ```
+## Fazendo o footer e controlando melhor os elementos
 ### Como definir os elementos filhos em coluna?
 ```css
 elementoPai {
@@ -43,7 +44,7 @@ elementoPai {
     height: 250px; 
 }
 ```
-Caso eu quiser distribuir os filhos na mesma linha posso definir um `flex-wrap: wrap; e um `height: 250px;`, como definido acima, e todos serão separados por colunas de `height: 250px;`.
+Caso eu quiser distribuir os filhos na mesma linha posso definir um `flex-wrap: wrap;` e um `height: 250px;`, como definido acima, e todos serão separados por colunas de `height: 250px;`.
 
 ### flex-flow
 Com o flex-flow, posso colocar dois valores de duas propriedades diferentes em uma propriedade.  
@@ -69,3 +70,20 @@ Colocar todo espaço à esquerda e à direita, jogando o conteúdo para o meio c
 Colocar todo espaço entre os elementos como vimos antes usando `justify-content: space-between`.
 
 E uma possibilidade bem interessante também é colocar o espaço em volta dos elementos. Podemos usar o `justify-content: space-around` para isso.
+
+## Grid principal e limitações do flexbox
+
+### Como selecionar elementos filhos multiplos de quatro?
+```css
+elementoPai:nth-child(4n) {
+    margin-right: 0;
+}
+```
+No exemplo acima, retiramos dos elementos múltiplos de 4 a `margin`à direita.
+### Como selecionar os elementos filhos múltiplos de 5?
+```css
+elementoPai:nth-child(4n+1) {
+    margin-left: 0;
+}
+```
+## Arrumando os elementos com flex para mobile
