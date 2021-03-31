@@ -87,3 +87,4 @@ elementoPai:nth-child(4n+1) {
 }
 ```
 ## Arrumando os elementos com flex para mobile
+
