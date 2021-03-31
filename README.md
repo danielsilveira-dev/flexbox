@@ -88,3 +88,73 @@ elementoPai:nth-child(4n+1) {
 ```
 ## Arrumando os elementos com flex para mobile
 
+```css
+@media (max-width: 768px) {
+    .cabecalhoPrincipal-nav {
+        flex-direction: column;
+    }
+
+    .cabecalhoPrincipal .container {
+        flex-direction: column;
+        align-items: initial;
+        text-align: center;
+    }
+    .conteudoPrincipal-cursos {
+        flex-direction: column;
+    }
+
+    .conteudoPrincipal-cursos-link {
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list {
+        height: auto;
+    }
+
+    .rodapePrincipal-patrocinadores .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rodapePrincipal-patrocinadores-list {
+        margin: 0;
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm {
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset {
+        justify-content: center;
+    }
+}
+```
+## flex-order
+
+O `order:;` posso utilizar em algum elemento filho.
+Por exemplo:
+```css
+elemento {
+    order: -1;
+}
+```
+Por padrão, o `order:;` de um elemento filho é `0`.  
+Passamos o `-1` como valor, para colocar um doa elementos filhos como primeiro filho.
+
+## Vantagens e o vídeo
+
+## flex-grow
+
+O `flex-grow:;` funciona da seguinte maneira:
+
+Se eu precisar aumentar o espaço ocupado pelos elementos, posso colocar da seguinte forma:
+```css
+elemento{
+    flex-grow: 1;
+}
+
+elemento-2 {
+    flex-grow:2; /* Este elemento vai ficar maior que o primeiro elemento */
+}
+```
